@@ -1,0 +1,45 @@
+{
+  "private": true,
+  "scripts": {
+    "start": "umi dev",
+    "build": "umi build",
+    "server": "umi build && node server.js",
+    "test": "umi test",
+    "lint": "eslint --ext .js src mock tests",
+    "precommit": "lint-staged"
+  },
+  "dependencies": {
+    "axios": "^0.19.0",
+    "moment": "^2.24.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-lazyload": "^2.6.5",
+    "react-perfect-scrollbar": "^1.5.3"
+  },
+  "devDependencies": {
+    "babel-eslint": "^9.0.0",
+    "eslint": "^5.4.0",
+    "eslint-config-umi": "^1.4.0",
+    "eslint-plugin-flowtype": "^2.50.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^5.1.1",
+    "eslint-plugin-react": "^7.11.1",
+    "husky": "^0.14.3",
+    "lint-staged": "^7.2.2",
+    "react-test-renderer": "^16.7.0",
+    "roadhog-api-doc": "^1.1.2",
+    "umi": "2.12.6",
+    "umi-plugin-react": "^1.14.9",
+    "umi-server": "^1.1.7",
+    "webpack-chain": "^6.0.0"
+  },
+  "lint-staged": {
+    "*.{js,jsx}": [
+      "eslint --fix",
+      "git add"
+    ]
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  }
+}
